@@ -303,3 +303,31 @@ Processing by UsersController#show as */*
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 871)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:20:00 -0600
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:20:00 -0600
+  
+SyntaxError (/Users/grant/Desktop/Flatiron School/phase-4/Priddle/config/routes.rb:3: syntax error, unexpected <<, expecting `end'
+<<<<<<< HEAD
+^~
+/Users/grant/Desktop/Flatiron School/phase-4/Priddle/config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
+=======
+^~~
+):
+  
+config/routes.rb:3: syntax error, unexpected <<, expecting `end'
+config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
+config/routes.rb:3: syntax error, unexpected <<, expecting `end'
+config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
+  
+SyntaxError (/Users/grant/Desktop/Flatiron School/phase-4/Priddle/config/routes.rb:3: syntax error, unexpected <<, expecting `end'
+<<<<<<< HEAD
+^~
+/Users/grant/Desktop/Flatiron School/phase-4/Priddle/config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
+=======
+^~~
+):
+  
+config/routes.rb:3: syntax error, unexpected <<, expecting `end'
+config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
+config/routes.rb:3: syntax error, unexpected <<, expecting `end'
+config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
