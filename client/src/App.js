@@ -16,8 +16,11 @@ function App() {
 
   return (
     <div className="App">
-      {user ? <Home user={user} /> : <Login setUser={setUser} />}
-      
+      {user ? (
+        <Home user={user} setUser={setUser} />
+      ) : (
+        <Login setUser={setUser} />
+      )}
     </div>
   );
 }
