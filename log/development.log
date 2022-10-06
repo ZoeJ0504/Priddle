@@ -331,3 +331,81 @@ config/routes.rb:3: syntax error, unexpected <<, expecting `end'
 config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
 config/routes.rb:3: syntax error, unexpected <<, expecting `end'
 config/routes.rb:7: syntax error, unexpected ===, expecting end-of-input
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:08 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.3ms)
+Completed 200 OK in 102ms (Views: 2.0ms | ActiveRecord: 59.5ms | Allocations: 7394)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:08 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.16ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1025)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:33 -0600
+Processing by UsersController#show as */*
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:34 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 200 OK in 9ms (Views: 1.1ms | ActiveRecord: 1.6ms | Allocations: 2475)
+
+
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 401 Unauthorized in 72ms (Views: 0.6ms | ActiveRecord: 40.1ms | Allocations: 4976)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:43 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.18ms)
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 0.9ms | Allocations: 870)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:43 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 401 Unauthorized in 8ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 808)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:44 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (5.87ms)
+Completed 200 OK in 47ms (Views: 12.5ms | ActiveRecord: 1.7ms | Allocations: 877)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-06 11:27:45 -0600
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 808)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-10-06 11:27:46 -0600
+Processing by SessionsController#destroy as */*
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-10-06 11:27:53 -0600
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"Grant", "password"=>"[FILTERED]", "session"=>{"username"=>"Grant", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Grant"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.15ms)
+Completed 201 Created in 264ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 1258)
+
+
