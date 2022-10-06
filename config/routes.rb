@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :groups
   resources :posts
-  resources :users
+  resources :users, only: [:show, :create]
+  resources :sessions, only: [:create, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

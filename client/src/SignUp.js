@@ -5,9 +5,8 @@ function SignUp({ setUser, setIsVisible }) {
   const [password, setPassword] = useState("");
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
-
   function handleClick(e) {
-    setIsVisible(true)
+    setIsVisible(true);
   }
 
   function handleSubmit(e) {
@@ -27,37 +26,37 @@ function SignUp({ setUser, setIsVisible }) {
         r.json().then((user) => setUser(user));
       }
     });
-    setIsVisible(true)
+    setIsVisible(true);
   }
 
   return (
     <div>
-        Sign Up!
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
-            <input
-                type="text"
-                id="username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            <label htmlFor="password">Password:</label>
-            <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            <label htmlFor="password_confirmation">Confirm Password:</label>
-            <input
-                type="password"
-                id="password_confirmation"
-                value={passwordConfirmation}
-                onChange={(e) => setPasswordConfirmation(e.target.value)}
-            />
-            <button type="submit">Submit</button>
-        </form>
-        <button onClick={handleClick}>Have an account already?  Login!</button>
+      Sign Up!
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+        />
+        <label htmlFor="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <label htmlFor="password_confirmation">Confirm Password:</label>
+        <input
+          type="password"
+          id="password_confirmation"
+          value={passwordConfirmation}
+          onChange={(e) => setPasswordConfirmation(e.target.value)}
+        />
+        <button type="submit">Submit</button>
+      </form>
+      <button onClick={handleClick}>Have an account already? Login!</button>
     </div>
   );
 }
