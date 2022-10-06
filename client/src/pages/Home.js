@@ -1,20 +1,16 @@
 import React from "react";
+import NavBar from "../components/NavBar";
 
-function Home({setUser}) {
-  function handleClick(e) {
-    fetch("/logout", {
-      method: "DELETE",
-    }).then((r) => {
-      if (r.ok) {
-        setUser(null);
-      }
-    });
-  }
+
+function Home({ setUser }) {
+
 
   return (
     <div>
+      <NavBar setUser={setUser} />
       <h1>I am the home page</h1>
-      <button onClick={handleClick}>Logout</button>
+
+
     </div>
   );
 }

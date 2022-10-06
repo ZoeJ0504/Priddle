@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Riddle () {
+function Riddle() {
 
 
-    return(
+    return (
         <div>
-
+            I am the Riddles page
         </div>
     )
 }

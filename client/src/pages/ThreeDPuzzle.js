@@ -5,7 +5,7 @@ function ThreeDPuzzle() {
 
     return (
         <div>
-
+I am the 3dPuzzle page
         </div>
     )
 }
