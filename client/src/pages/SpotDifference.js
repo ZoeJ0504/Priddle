@@ -3,7 +3,7 @@ import React from 'react'
 function SpotDifference() {
 
     return (
-        <div>
+        <div> I am the SpotDifference page
 
         </div>
     )

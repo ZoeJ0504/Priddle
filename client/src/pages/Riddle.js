@@ -4,8 +4,7 @@ function Riddle () {
 
 
     return(
-        <div>
-
+        <div>I am the Riddle Page
         </div>
     )
 }

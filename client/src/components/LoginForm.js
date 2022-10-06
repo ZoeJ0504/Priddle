@@ -35,7 +35,7 @@ function LoginForm({ setUser, setIsVisible }) {
             onChange={(e) => setUsername(e.target.value)}
             />
             <input
-                type="text"
+                type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
