@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import Login from "./Login";
+import { Routes, Route } from "react-router-dom"
+import Riddle from "./pages/Riddle"
+import SpotDifference from "./pages/SpotDifference";
+import ThreeDPuzzles from "./pages/ThreeDPuzzle";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -21,6 +25,12 @@ function App() {
       ) : (
         <Login setUser={setUser} />
       )}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/riddles" element={<Riddle />} />
+        <Route path="/spot_the_difference" element={<SpotDifference />} />
+        <Route path="/3d_puzzle" element={<ThreeDPuzzles />} />
+      </Routes>
     </div>
   );
 }
