@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
+import SignedInPrivilege from "./SignedInPrivilege";
 
-function PostDisplays({ text, id, user }) {
+function PostDisplays({ text, id, user, postId }) {
     const [maybe, setMaybe] = useState([])
-    const [updatePost, setUpdatePost] = useState(false)
-    const [updatedText, setUpdatedText] = useState("")
 
+    console.log({ text, id, user, postId, maybe })
 
     useEffect(() => {
         fetch(`/users/${id}`)
@@ -12,24 +12,11 @@ function PostDisplays({ text, id, user }) {
             .then(data => setMaybe(data.username))
     }, [id])
 
-    const handleClick = () => {
-        setUpdatePost(!updatePost)
-    }
-
-    const handleChange = (event) => {
-        setUpdatedText(event.target.value)
-    }
-
     return (
         <div>
             <p>{text}</p>
             <p>-{maybe}</p>
-            {user.username === maybe ? <button onClick={handleClick}>Update</button> : <p>Enjoy the Post!</p>}
-            {user.username === maybe ? <button>Delete</button> : ""}
-            {updatePost === true ? <form>
-                <input type="text" onChange={handleChange} />
-                <button>Update!</button>
-            </form> : ""}
+            {user && (user?.username === maybe ? <SignedInPrivilege currentPost={postId} /> : <p>Enjoy the Post!</p>)}
         </div>
     )
 }

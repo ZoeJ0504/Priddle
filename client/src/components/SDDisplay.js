@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function SDDisplay({ text, user }) {
     const [userData, setUserData] = useState([])
 
-
+    console.log(user)
     useEffect(() => {
         fetch(`/users/${user}`)
             .then(res => res.json())

@@ -9,7 +9,7 @@ import ThreeDPuzzles from "./pages/ThreeDPuzzle";
 import Home2 from "./pages/Home2";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(undefined);
 
   useEffect(() => {
     fetch("/me").then((response) => {
@@ -18,6 +18,8 @@ function App() {
       }
     });
   }, []);
+
+  console.log(user)
 
   return (
     <div className="App">

@@ -6,6 +6,8 @@ function SpotDifference({ user }) {
     const [post, setPost] = useState()
     const id = 2
 
+    console.log(user)
+
     useEffect(() => {
         fetch(`/groups/${id}`)
             .then(res => res.json())
