@@ -10,8 +10,10 @@ function SignedInPrivilege({ currentPost }) {
     }
 
     const handleChange = (event) => {
+        console.log(updatedText)
         setUpdatedText(event.target.value)
     }
+
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -21,7 +23,9 @@ function SignedInPrivilege({ currentPost }) {
             headers: {
                 "Content-type": "application/json"
             },
-            body: JSON.stringify(updatedText),
+            body: JSON.stringify({
+                text: updatedText
+            }),
         })
             .then(res => res.json())
             .then(data => console.log(data))
@@ -41,7 +45,7 @@ function SignedInPrivilege({ currentPost }) {
             <button onClick={handleDelete}>Delete</button>
             {updatePost === true ?
                 <form onSubmit={handleSubmit}>
-                    <input type="text" onChange={handleChange} />
+                    <input type="text" value={updatedText} onChange={handleChange} />
                     <button>Update!</button>
                 </form> : ""}
 

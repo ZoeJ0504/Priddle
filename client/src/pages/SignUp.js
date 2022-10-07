@@ -33,6 +33,7 @@ function SignUp({ setUser, setIsVisible }) {
     <div>
       Sign Up!
       <form onSubmit={handleSubmit}>
+        <p></p>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
@@ -40,6 +41,7 @@ function SignUp({ setUser, setIsVisible }) {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+        <p></p>
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -47,6 +49,7 @@ function SignUp({ setUser, setIsVisible }) {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
+        <p></p>
         <label htmlFor="password_confirmation">Confirm Password:</label>
         <input
           type="password"
@@ -54,6 +57,7 @@ function SignUp({ setUser, setIsVisible }) {
           value={passwordConfirmation}
           onChange={(e) => setPasswordConfirmation(e.target.value)}
         />
+        <p></p>
         <button type="submit">Submit</button>
       </form>
       <button onClick={handleClick}>Have an account already? Login!</button>

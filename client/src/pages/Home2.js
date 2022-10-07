@@ -1,12 +1,14 @@
 import React from "react";
+import styled from "styled-components"
 
 
 function Home2() {
 
     return (
-        <div>
-            I am home page 2.0
-        </div>
+<div>
+<h1>Welcome to Puddle!</h1>
+<p>Social site to share puzzles and riddles!</p>
+</div>
     )
 }
 

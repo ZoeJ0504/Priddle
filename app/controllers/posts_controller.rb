@@ -17,8 +17,8 @@ class PostsController < ApplicationController
 
     def update
         p = Post.find(params[:id])
-        updated = p.update(:text => params[:text])
-        render json: updated
+        p.update(:text => params[:text])
+        render json: p
     end
     
     private 
