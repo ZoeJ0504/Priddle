@@ -1,7 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-function NavBar({ setUser }) {
+function NavBar({ logout }) {
     const navigate = useNavigate()
 
 
@@ -10,7 +10,7 @@ function NavBar({ setUser }) {
             method: "DELETE",
         }).then((r) => {
             if (r.ok) {
-                setUser(null);
+                logout(null);
             }
         });
         navigate("/")
@@ -44,3 +44,4 @@ function NavBar({ setUser }) {
 }
 
 export default NavBar
+

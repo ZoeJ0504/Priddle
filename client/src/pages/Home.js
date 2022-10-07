@@ -2,11 +2,11 @@ import React from "react";
 import NavBar from "../components/NavBar";
 
 
-function Home({ user }) {
+function Home({ user, setUser }) {
 
   return (
     <div>
-      <NavBar />
+      <NavBar logout={setUser} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :groups, only: [:index, :show]
   resources :posts, only: [:index, :update, :create, :destroy]
-  resources :users, only: [:show, :create]
+  resources :users
   resources :sessions, only: [:create, :destroy]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -13,7 +13,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/groups/:id", to: "groups#show"
-  get "/users/:id", to: "users#show_by_id"
-
+  get "/users/:id", to: "users#id"
 
 end

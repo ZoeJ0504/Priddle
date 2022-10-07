@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
 
     def show
         g = Group.find(params[:id])
-        render json: g 
+        render json: g, include: ['posts', 'posts.users']
     end
 
 

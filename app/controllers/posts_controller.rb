@@ -10,11 +10,15 @@ class PostsController < ApplicationController
     end
 
     def destroy
-
+        p = Post.find(params[:id])
+       delete_post = p.destroy
+       render json: delete_post
     end
 
     def update
-
+        p = Post.find(params[:id])
+        updated = p.update(:text => params[:text])
+        render json: updated
     end
     
     private 
