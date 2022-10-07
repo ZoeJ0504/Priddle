@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :groups, only: [:index]
+  resources :groups, only: [:index, :show]
   resources :posts, only: [:index, :update, :create, :destroy]
   resources :users, only: [:show, :create]
   resources :sessions, only: [:create, :destroy]
@@ -11,4 +11,8 @@ Rails.application.routes.draw do
   get "/me", to: "users#show"
   post "/signup", to: "users#create"
   delete "/logout", to: "sessions#destroy"
+
+  get "/groups/:id", to: "groups#show"
+
+
 end

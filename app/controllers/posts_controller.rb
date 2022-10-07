@@ -4,8 +4,9 @@ class PostsController < ApplicationController
         render json: Post.all
     end
 
-    def show
-
+    def create  
+        p = Post.create(post_params)
+        render json: p ,status: :created
     end
 
     def destroy
@@ -16,5 +17,10 @@ class PostsController < ApplicationController
 
     end
     
+    private 
+
+    def post_params
+        params.permit(:text, :user_id, :group_id)
+    end
     
 end

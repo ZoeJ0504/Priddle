@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom"
 function NavBar({ setUser }) {
     const navigate = useNavigate()
 
+
     function handleClick(e) {
         fetch("/logout", {
             method: "DELETE",
@@ -20,7 +21,7 @@ function NavBar({ setUser }) {
     }
 
     const handleHomeClick = () => {
-        navigate("/")
+        navigate("/home")
     }
 
     const handleSDClick = () => {
