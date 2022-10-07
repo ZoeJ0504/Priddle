@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
+import SignedInPrivilege from "./SignedInPrivilege";
 
-function SDDisplay({ text, user }) {
-    const [userData, setUserData] = useState([])
+function SDDisplay({ text, user, id, postId }) {
+    const [maybe, setMaybe] = useState([])
 
-    console.log(user)
+    console.log(text)
+
     useEffect(() => {
-        fetch(`/users/${user}`)
+        fetch(`/users/${id}`)
             .then(res => res.json())
-            .then(data => setUserData(data))
-    }, [user])
-
-
+            .then(data => setMaybe(data.username))
+    }, [id])
+    console.log(text)
     return (
         <div>
             <img src={text} alt={text} />
-            <p>{userData.username}</p>
+            <p>-{maybe}</p>
+            {user && (user?.username === maybe ? <SignedInPrivilege currentPost={postId} /> : <p>Enjoy the Post!</p>)}
         </div>
     )
 }

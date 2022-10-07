@@ -27,10 +27,18 @@ function SignedInPrivilege({ currentPost }) {
             .then(data => console.log(data))
     }
 
+    const handleDelete = () => {
+        fetch(`/posts/${currentPost}`, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+
+    }
+
     return (
         <div>
             <button onClick={handleClick}>Update</button>
-            <button>Delete</button>
+            <button onClick={handleDelete}>Delete</button>
             {updatePost === true ?
                 <form onSubmit={handleSubmit}>
                     <input type="text" onChange={handleChange} />

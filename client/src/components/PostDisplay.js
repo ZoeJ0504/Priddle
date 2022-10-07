@@ -4,8 +4,7 @@ import SignedInPrivilege from "./SignedInPrivilege";
 function PostDisplays({ text, id, user, postId }) {
     const [maybe, setMaybe] = useState([])
 
-    console.log({ text, id, user, postId, maybe })
-
+    console.log(text)
     useEffect(() => {
         fetch(`/users/${id}`)
             .then(res => res.json())

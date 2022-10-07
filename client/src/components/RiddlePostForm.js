@@ -1,35 +1,19 @@
 import React, { useState } from "react";
 
 
-function RiddlePostForm({ user }) {
-    const [newPost, setNewPost] = useState({})
+function RiddlePostForm({ user, updatedText, handleHandler, handleChange }) {
 
-    const handleChange = (event) => {
-        setNewPost({
-            group_id: 1,
-            user_id: user.id,
-            text: event.target.value
-        })
-    }
+    console.log(user)
 
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        fetch("http://localhost:3000/posts", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(newPost),
-        })
-            .then(res => res.json())
 
-    }
+
+
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" />
-                <button type="submit" onChange={handleChange}>Post</button>
+            <form onSubmit={handleHandler}>
+                <input type="text" onChange={handleChange} value={updatedText} />
+                <button type="submit">Post</button>
             </form>
         </div>
     )
