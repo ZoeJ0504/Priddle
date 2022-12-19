@@ -44,7 +44,7 @@ function Riddle({ user }) {
     const handleChange = (e) => {
         setUpdatedText(e.target.value)
     }
-    console.log(posts)
+
     return (
         <div>
             <RiddlePostForm user={user} handleHandler={handleHandler} handleChange={handleChange} />
