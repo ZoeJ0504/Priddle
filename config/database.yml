@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: priddle_production
-  username: priddle
-  password: <%= ENV["PRIDDLE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
