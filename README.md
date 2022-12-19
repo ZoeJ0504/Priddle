@@ -1,7 +1,7 @@
 # Priddle
 
 <p align="center">
-  <img src=(.client/src/image/Priddle.png)/>
+  <img src=(client/src/image/Priddle.png)/>
 </p>
 
 Social Site that allows users to comment and post puzzles and riddles. 
