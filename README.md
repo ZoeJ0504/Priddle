@@ -28,42 +28,24 @@ Social Site that allows users to comment and post puzzles and riddles.
 
 
 
-## Installation
+## Get started
+after cloning the repo into you system you will need to: 
+- make sure your system is running a ruby version 
 
-**1. Clone the repository to your local maching**
+After cloning the repo, run the following steps in the project directory to get started:
 
-**2. Navigate into the root folder and run the build command**
-  
-  To install all node packages:
-  ```
-  $ npm install
-  ```
+### `bundle install`
+Install Ruby gem packages associated with the project.
 
-**3. Add the necessary environment variables**
+ ```rails db:migrate db:seed```
+Migrates all tables and associations that are needed. Also make sure to seed the backend so you have some data to work with.
 
-  Reverie Sound Review makes use of development and production variables for fetching.
-  
-  First navigate to the root directory and create `env.development`
-  
-  Navigate to this file and add the following:
-  
-  ```javascript
-      REACT_APP_API_URL=http://localhost:8000
-  ```
-  
-  This setup will only work if you run JSON-Server on port 8000. If you're running it on a different port, then update the `REACT_APP_API_URL` variable to match.
+ ```rails s```
+Start your Rails server. For a closer look at just the backend, you can open http://localhost:3000
 
-  **5. Start up the servers**
-  
-  Run this to start up the JSON-Server backend:
-  ```
-  $ json-server --watch src/data/db.json --port 8000
-  ```
-  
-  Then, in another terminal, run this to start up the React frontend:
-  ```
-  $ npm start
-  ```
+```npm start --prefix client```
+Runs the app in the development mode. 
+
 
 ## Contributing
 
