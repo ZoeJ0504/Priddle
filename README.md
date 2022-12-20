@@ -29,7 +29,7 @@ Social Site that allows users to comment and post puzzles and riddles.
 
 
 ## Get started
-after cloning the repo into you system you will need to: 
+After cloning the repo into you system you will need to: 
 - make sure your system is running a ruby version 
 
 After cloning the repo, run the following steps in the project directory to get started:
@@ -48,6 +48,8 @@ Migrates all tables and associations that are needed. Also make sure to seed the
  rails s
  ```
 Start your Rails server. For a closer look at just the backend, you can open http://localhost:3000
+
+Finally for your front end run:
 
 ```
 npm start --prefix client
