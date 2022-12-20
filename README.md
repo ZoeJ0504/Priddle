@@ -34,16 +34,24 @@ after cloning the repo into you system you will need to:
 
 After cloning the repo, run the following steps in the project directory to get started:
 
-### `bundle install`
+```
+bundle install
+```
 Install Ruby gem packages associated with the project.
 
- ```rails db:migrate db:seed```
+ ```
+ rails db:migrate db:seed
+ ```
 Migrates all tables and associations that are needed. Also make sure to seed the backend so you have some data to work with.
 
- ```rails s```
+ ```
+ rails s
+ ```
 Start your Rails server. For a closer look at just the backend, you can open http://localhost:3000
 
-```npm start --prefix client```
+```
+npm start --prefix client
+```
 Runs the app in the development mode. 
 
 
