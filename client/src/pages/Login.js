@@ -8,9 +8,9 @@ function Login({ setUser }) {
   return (
     <div>
       {isVisible ? (
-        <LoginForm setUser={setUser} setIsVisible={setIsVisible} />
-      ) : (
         <SignUp setUser={setUser} setIsVisible={setIsVisible} />
+      ) : (
+        <LoginForm setUser={setUser} setIsVisible={setIsVisible} />
       )}
     </div>
   );
