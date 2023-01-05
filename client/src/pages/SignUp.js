@@ -6,7 +6,7 @@ function SignUp({ setUser, setIsVisible }) {
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
   function handleClick(e) {
-    setIsVisible(true);
+    setIsVisible(false);
   }
 
   function handleSubmit(e) {
