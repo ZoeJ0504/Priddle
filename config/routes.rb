@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :riddles
   resources :groups, only: [:index, :show]
   resources :posts, only: [:index, :update, :create, :destroy]
   resources :users

@@ -6,7 +6,7 @@ function Home2() {
 
     return (
 <div>
-<h1>Welcome to Puddle!</h1>
+<h1>Welcome to Priddle!</h1>
 <p>Social site to share puzzles and riddles!</p>
 </div>
     )
