@@ -1,23 +1,24 @@
-class RiddlesController < ApplicationController
+class WordpuzzlesController < ApplicationController
+
 
     def index
-        render json: Post.all
+        render json: Wordpuzzle.all
     end
 
     def create  
-        r = Riddle.create(riddle_params)
+        r = Wordpuzzle.create(wordpuzzle_params)
         render json: r ,status: :created
     end
 
     def update
-        p = Riddle.find(params[:id])
+        p = Wordpuzzle.find(params[:id])
         p.update(:post => params[:post])
         render json: p
     end
 
 
 
-    def riddle_params
+    def wordpuzzle_params
         params.permit(:message, :user_id)
     end
 end

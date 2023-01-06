@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :riddles
+  resources :wordpuzzles
   resources :groups, only: [:index, :show]
   resources :posts, only: [:index, :update, :create, :destroy]
   resources :users
@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   get "/groups/:id", to: "groups#show"
   get "/users/:id", to: "users#id"
 
-  get "/riddles", to: "riddle#index"
+  get "/riddles", to: "wordpuzzles#index"
 
 end
