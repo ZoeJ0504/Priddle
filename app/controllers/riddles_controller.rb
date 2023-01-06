@@ -18,6 +18,6 @@ class RiddlesController < ApplicationController
 
 
     def riddle_params
-        params.permit(:post, :user_id)
+        params.permit(:message, :user_id)
     end
 end
