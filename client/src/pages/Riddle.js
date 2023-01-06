@@ -47,7 +47,7 @@ function Riddle({ user }) {
     return (
         <div>
             <RiddlePostForm user={user} handleHandler={handleHandler} handleChange={handleChange} />
-            {posts.map(post => { return <PostDisplays key={post.id} text={post.text} id={post.user_id} user={user} postId={post.id} /> })}
+            {posts?.map(post => { return <PostDisplays key={post.id} text={post.text} id={post.user_id} user={user} postId={post.id} /> })}
         </div>
     )
 }
