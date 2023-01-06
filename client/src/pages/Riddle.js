@@ -4,14 +4,13 @@ import RiddlePostForm from '../components/RiddlePostForm'
 
 function Riddle({ user }) {
     const [posts, setPost] = useState([])
-    const id = 1
     const [newPost, setNewPost] = useState({})
     const [updatedText, setUpdatedText] = useState("")
 
 
 
     useEffect(() => {
-        fetch(`/groups/${id}`)
+        fetch(`"/riddles"`)
             .then(res => res.json())
             .then(data => setPost(data.posts))
     }, [])

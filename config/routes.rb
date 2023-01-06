@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   get "/groups/:id", to: "groups#show"
   get "/users/:id", to: "users#id"
 
+  get "/riddles", to "riddle#index"
+
 end
