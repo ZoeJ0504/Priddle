@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   get "/users/:id", to: "users#id"
 
   get "/riddles", to: "wordpuzzles#index"
+  get "/riddles/posts", to: "wordpuzzles#create"
 
 end

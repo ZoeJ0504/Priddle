@@ -10,7 +10,7 @@ function Riddle({ user }) {
 
 
     useEffect(() => {
-        fetch(`"/riddles"`)
+        fetch("/riddles")
             .then(res => res.json())
             .then(data => setPost(data.posts))
     }, [])
@@ -22,13 +22,13 @@ function Riddle({ user }) {
         setNewPost({
             group_id: 1,
             user_id: user.id,
-            text: updatedText
+            post: updatedText
         })
         handleSubmit()
     }
 
     const handleSubmit = () => {
-        fetch("/posts", {
+        fetch("/riddles/posts", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
