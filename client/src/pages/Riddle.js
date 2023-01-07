@@ -16,6 +16,7 @@ function Riddle({ user }) {
     }, [])
 
 
+    console.log(user)
 
     const handleHandler = (e) => {
         e.preventDefault()
@@ -25,6 +26,8 @@ function Riddle({ user }) {
         })
         handleSubmit()
     }
+
+    console.log(riddle)
 
     const handleSubmit = () => {
         fetch("/rposts", {
@@ -45,7 +48,7 @@ function Riddle({ user }) {
 
     return (
         <div>
-            <RiddlePostForm user={user} handleHandler={handleHandler} handleChange={handleChange} />
+            <RiddlePostForm handleHandler={handleHandler} handleChange={handleChange} riddle={riddle} />
             {posts?.map(post => { return <PostDisplays key={post.id} text={post.text} id={post.user_id} user={user} postId={post.id} /> })}
         </div>
     )

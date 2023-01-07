@@ -1,7 +1,7 @@
 import React from "react";
 
 
-function RiddlePostForm({ user, updatedText, handleHandler, handleChange }) {
+function RiddlePostForm({riddle, handleHandler, handleChange }) {
 
 
 
@@ -11,7 +11,7 @@ function RiddlePostForm({ user, updatedText, handleHandler, handleChange }) {
     return (
         <div>
             <form onSubmit={handleHandler}>
-                <input type="text" onChange={handleChange} value={updatedText} />
+                <input type="text" onChange={handleChange} value={riddle} />
                 <button type="submit">Post</button>
             </form>
         </div>
