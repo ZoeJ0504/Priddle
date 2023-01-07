@@ -3,7 +3,7 @@ import PostDisplays from '../components/PostDisplay'
 import RiddlePostForm from '../components/RiddlePostForm'
 
 function Riddle({ user }) {
-    const [posts, setPost] = useState([])
+    const [comments, setComments] = useState([])
     const [newPost, setNewPost] = useState({})
     const [riddle, setRiddle] = useState("")
 
@@ -12,7 +12,7 @@ function Riddle({ user }) {
     useEffect(() => {
         fetch("/riddles")
             .then(res => res.json())
-            .then(data => setPost(data.posts))
+            .then(data => setComments(data.posts))
     }, [])
 
 
@@ -36,7 +36,7 @@ function Riddle({ user }) {
             body: JSON.stringify(newPost),
         })
             .then(res => res.json())
-        setPost([newPost, ...posts])
+        setComments([newPost, ...comments])
     }
 
 
@@ -47,7 +47,7 @@ function Riddle({ user }) {
     return (
         <div>
             <RiddlePostForm handleHandler={handleHandler} handleChange={handleChange} riddle={riddle} />
-            {posts?.map(post => { return <PostDisplays key={post.id} text={post.text} id={post.user_id} user={user} postId={post.id} /> })}
+            {comments?.map(comment => { return <PostDisplays key={comment.id} text={comment.post} id={comment.user_id} user={user} postId={comment.id} /> })}
         </div>
     )
 }
