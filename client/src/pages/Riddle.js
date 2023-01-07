@@ -5,7 +5,7 @@ import RiddlePostForm from '../components/RiddlePostForm'
 function Riddle({ user }) {
     const [posts, setPost] = useState([])
     const [newPost, setNewPost] = useState({})
-    const [updatedText, setUpdatedText] = useState("")
+    const [riddle, setRiddle] = useState("")
 
 
 
@@ -21,7 +21,7 @@ function Riddle({ user }) {
         e.preventDefault()
         setNewPost({
             user_id: user.id,
-            post: updatedText
+            post: riddle
         })
         handleSubmit()
     }
@@ -40,7 +40,7 @@ function Riddle({ user }) {
 
 
     const handleChange = (e) => {
-        setUpdatedText(e.target.value)
+        setRiddle(e.target.value)
     }
 
     return (
