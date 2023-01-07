@@ -20,7 +20,6 @@ function Riddle({ user }) {
     const handleHandler = (e) => {
         e.preventDefault()
         setNewPost({
-            group_id: 1,
             user_id: user.id,
             post: updatedText
         })

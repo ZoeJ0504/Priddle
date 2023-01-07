@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 function RiddlePostForm({ user, updatedText, handleHandler, handleChange }) {
 
-    console.log(user)
 
 
 

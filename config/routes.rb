@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :wordpuzzles
+  resources :wordpuzzles, only: [:index, :update, :create, :destroy]
   resources :groups, only: [:index, :show]
   resources :posts, only: [:index, :update, :create, :destroy]
   resources :users
