@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
 
   get "/groups/:id", to: "groups#show"
-  get "/users/:id", to: "users#id"
+  get "/users/:id", to: "users#show_id"
 
   get "/riddles", to: "wordpuzzles#index"
   get "/rposts", to: "wordpuzzles#create"

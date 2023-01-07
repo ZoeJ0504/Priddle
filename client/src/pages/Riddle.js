@@ -16,7 +16,6 @@ function Riddle({ user }) {
     }, [])
 
 
-    console.log(user)
 
     const handleHandler = (e) => {
         e.preventDefault()
@@ -27,7 +26,6 @@ function Riddle({ user }) {
         handleSubmit()
     }
 
-    console.log(riddle)
 
     const handleSubmit = () => {
         fetch("/rposts", {
