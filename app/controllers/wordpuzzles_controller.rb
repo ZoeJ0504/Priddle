@@ -19,6 +19,6 @@ class WordpuzzlesController < ApplicationController
 
 
     def wordpuzzle_params
-        params.permit(:message, :user_id)
+        params.permit(:post, :user_id)
     end
 end

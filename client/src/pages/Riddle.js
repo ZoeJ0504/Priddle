@@ -28,7 +28,7 @@ function Riddle({ user }) {
     }
 
     const handleSubmit = () => {
-        fetch("/riddles/posts", {
+        fetch("/rposts", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
