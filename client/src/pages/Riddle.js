@@ -11,10 +11,10 @@ function Riddle({ user }) {
 
     useEffect(() => {
         fetch("/riddles")
-            .then(res => res.json())
+            .then(r => r.json())
             .then(data => {
                 console.log(data)
-                setComments(data.posts)
+                // setComments(data.posts)
             })
     }, [])
 
