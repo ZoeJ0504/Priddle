@@ -34,16 +34,22 @@ function NavBar({ logout }) {
     }
 
     return (
-        <div>
+        <NavBarDiv>
             <div onClick={handleHomeClick}>Home</div>
             <div onClick={handleRiddleClick}>Riddles</div>
             <div onClick={handleSDClick}>Spot The Difference</div>
             <div onClick={handle3DPuzzle}>3D Puzzle</div>
             <button onClick={handleClick}>Logout</button>
-        </div>
+        </NavBarDiv>
     )
 }
 
-export default NavBar
+export default NavBar;
+
+const NavBarDiv = styled.div`
+display: flex; 
+flex-direction: row;
+justify-content: space-around;
+`
 
 
