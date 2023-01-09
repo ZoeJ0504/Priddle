@@ -29,6 +29,7 @@ function Riddle({ user }) {
         handleSubmit()
     }
 
+    console.log(newPost)
 
     const handleSubmit = () => {
         fetch("/rposts", {
