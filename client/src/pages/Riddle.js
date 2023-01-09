@@ -10,7 +10,7 @@ function Riddle({ user }) {
 
 
     useEffect(() => {
-        fetch("/riddles")
+        fetch("/wordpuzzles")
             .then(r => r.json())
             .then(data => {
                 console.log(data)
