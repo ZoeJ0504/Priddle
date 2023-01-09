@@ -35,6 +35,9 @@ function NavBar({ logout }) {
 
     return (
         <NavBarDiv>
+            <div>
+                <img src="./src/image/Priddle.png" alt="Priddle Logo" />
+            </div>
             <div onClick={handleHomeClick}>Home</div>
             <div onClick={handleRiddleClick}>Riddles</div>
             <div onClick={handleSDClick}>Spot The Difference</div>
